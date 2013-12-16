@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sliding Animation</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("#slideup").click(function(){
+				$("#theDiv").slideUp(3000, function(){
+					alert("Slide Up Completed");
+				});
+			});
+			$("#slidedown").click(function(){
+				$("#theDiv").slideDown("normal");
+			});
+			$("#toggleslide").click(function(){
+				$("#theDiv").slideToggle("slow");
+			});
+		});
+
+	</script>
+	<style type="text/css">
+		div#theDiv {
+			width: 250px;
+			height: 180px;
+			margin: 10px;
+			padding: 20px;
+			background: blue;
+			border: 2px solid black;
+			cursor: pointer;
+		}
+		p, span {
+			font-size: 16pt;
+		}
+		button {
+			margin: 5px;
+		}
+	</style>
+</head>
+	<body>
+		<h1>Animation</h1>
+		<div id="theDiv"></div>
+		<button id="slideup">Slide Up</button>
+		<button id="slidedown">Slide Down</button>
+		<button id="toggleslide">Toggle Slide</button>
+	</body>
+</html>

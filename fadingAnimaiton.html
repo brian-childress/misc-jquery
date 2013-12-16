@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fading Animation</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("#fadeIn").click(function(){
+				$("#theDiv").fadeIn("normal");
+			});
+			$("#fadeOut").click(function(){
+				$("#theDiv").fadeOut("normal");
+			});
+			$("#fadeTo3").click(function(){
+				$("#theDiv").fadeTo("slow", 0.3);
+			});
+			$("#fadeTo10").click(function(){
+				$("#theDiv").fadeTo("slow", 1.0);
+			});
+		});
+
+	</script>
+	<style type="text/css">
+		div#theDiv {
+			width: 250px;
+			height: 180px;
+			margin: 10px;
+			padding: 20px;
+			background: blue;
+			border: 2px solid black;
+			cursor: pointer;
+		}
+		p, span {
+			font-size: 16pt;
+		}
+		button {
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Animation</h1>
+	<div id="theDiv"></div>
+	<button id="fadeIn">Fade In</button>
+	<button id="fadeOut">Fade Out</button>
+	<button id="fadeTo3">Fade To 3</button>
+	<button id="fadeTo10">Fade To 10</button>
+</body>
+
+</html>

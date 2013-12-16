@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data Handling</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$("document").ready(function() {
+			$("#store").click(function(){
+				$("#div1").data("key1", 1234);
+				$("#div1").data("key2", "Brian");
+			});
+			$("#remove").click(function(){
+				$("#div1").removeData();
+			});
+			$("#show").click(function(){
+				// alert($("#div1").data("key1"));
+				// alert($("#div1").data("key2"));
+
+				alert(JSON.stringify($("#div1").data(),null, "   "));
+			});
+		});
+	</script>
+	<style type="text/css">
+		#div1{
+			width: 200px;
+			height: 100px;
+			background-color: blue;
+			color: white;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<h1>Using the data methods</h1>
+	<p>jQuery can associate....</p>
+	<div id="div1" data-key3="data attribute">Sample Div</div>
+	<p>
+		<button id="store">Click to STORE data</button>
+		<button id="remove">Click to REMOVE data</button>
+		<button id="show">Cllick to SHOW data</button>
+	</p>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Essential Training</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$("document").ready(function() {
+
+			//Attribute filtering
+			//$("p[class]").css("border", "3px solid red");
+			//$("p[id^=para]").css("border", "3px solid red");
+			//$("p[id^=para][lang*=en-]").css("border", "3px solid red");
+
+			//Content Filter
+			//$("li:contains(3)").css("border", "3px solid red");
+			//$("p:parent").css("border", "3px solid red");
+			//$("ul:has(li[class=a])").css("border", "3px solid red");
+			//$("ul li:nth-child(3)").css("border", "3px solid red");
+			//$("ul li:nth-child(2n)").css("border", "3px solid red");
+
+			//Form Selectors
+			//$("p[id^=para]").css("border", "3px solid red");
+
+			//alert("There are " + $("p").length + " <p> elements");
+
+			// var elems = $('li').get();
+			// alert("There are " + elems.length + " <li> tags");
+
+			//alert($('li').get(0));
+
+			//$("ul").find("li.b").css("border", "3px solid red");
+
+			// var leftmargin =0;
+			// var border = 3;
+			// $("p").each(function() {
+			// 	$(this).css("border", border +"px solid red");
+			// 	$(this).css("margin-left", leftmargin);
+			// 	border += 2;
+			// 	leftmargin += 10;
+			// });
+
+			//Add pdf icon to the end of all pdf links
+			//$("a[href$=.pdf").after("<img src='images/small_pdf_icon.gif' align='absbottom' />");
+
+			//alert($("#list1").html());
+			//$("#list1").html("<li>This is a new list item</li>");
+			// var newItem = $("<p>This is a new paragraph</p>");
+			// 	$("#para1").html(newItem.html());
+
+			//$("p:last").text("This is the last paragraph");
+
+			//$("p").append("this is some content");
+			//$("p:last").appendTo("p:first");
+			//$("p:last").prependTo("p:first");
+			
+			// $("p").wrapAll("<div style='border: 3px solid red'/>");
+			//$("ul").empty();
+		});
+	</script>
+	<style type="text/css">
+		.a { color: Navy; }
+		.b { color: Maroon; }
+	</style>
+</head>
+<body>
+	<ul id="list1">
+		<li class="a">item 1</li>
+		<li class="a">item 2</li>
+		<li class="b">item 3</li>
+		<li class="b">item 4</li>
+	</ul>
+<p class="a">This is a paragraph 1</p>
+<p id="para1">This is a paragraph 2</p>
+<p class="b">This is a paragraph 3</p>
+<p id="para4" lang="en-us">This is a paragraph 4</p>
+</body>
+
+</html>
